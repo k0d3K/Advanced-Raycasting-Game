@@ -6,13 +6,12 @@
 /*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:33:01 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/05 18:32:43 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/05 18:33:38 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "input.h"
 #include "gfx.h"
-#include "map.h"
 #include <math.h>
 
 /**
