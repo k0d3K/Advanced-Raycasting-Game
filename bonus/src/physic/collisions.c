@@ -6,7 +6,7 @@
 /*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 14:53:56 by lguerbig          #+#    #+#             */
-/*   Updated: 2025/05/05 15:30:47 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/05 18:26:21 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,10 @@ void	collision_effect(t_gfx *gfx, t_entity *e, int *hit)
 	t_vec2		dir;
 
 	if (e->type == T_COIN)
+	{
 		e->is_dead = 1;
+		gfx->game_vars.n_coins_collected++;
+	}
 	else
 	{
 		dir = vec2_normalize(e->player_dist);

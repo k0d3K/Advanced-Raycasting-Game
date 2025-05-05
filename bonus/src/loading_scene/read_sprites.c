@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   read_sprites.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 14:39:03 by lguerbig          #+#    #+#             */
-/*   Updated: 2025/04/16 19:51:28 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/05 18:33:02 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,10 @@ static char	*store_entity(t_gfx *gfx, char **args)
 		entity.type = T_COIN;
 	else
 		entity.type = T_ENEMY;
+	if (entity.type == T_COIN)
+		gfx->game_vars.n_coins++;
+	else
+		gfx->game_vars.n_enemies++;
 	pos_texture = dict_indexof(&gfx->texture_files, args[0]);
 	entity.atlas = gfx->textures.sprites + pos_texture;
 	err = get_pos_and_size(&entity, args);
