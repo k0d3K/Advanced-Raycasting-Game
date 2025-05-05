@@ -26,7 +26,8 @@ C_FILES := main dt map_utils \
 		game_flow no_debug debug movements player_management select_gun_img) \
 	$(addprefix minimap/, minimap minimap_drawing minimap_utils) \
 	$(addprefix physic/, physic collisions collisions_utils) \
-	$(addprefix rendering/, rendering rendering_draw_faces rendering_thread rendering_utils skybox render_hurt_effect render_stats render_life_bar) \
+	$(addprefix rendering/, rendering rendering_draw_faces rendering_thread rendering_utils skybox \
+		render_hurt_effect render_stats render_life_bar render_remaining_text) \
 	$(addprefix raycast/, raycast_list raycast_calc_dist raycast_utils raycast_next_coord raycasts raycast_doors) \
 	$(addprefix geo/, point vec2 vec3 intersection) \
 	$(addprefix gfx/, gfx_init gfx_deinit gfx_draw gfx_atlas gfx_text img texture bitmap gfx_line) \
