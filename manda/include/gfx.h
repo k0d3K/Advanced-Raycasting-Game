@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gfx.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 17:53:57 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/03/10 19:35:39 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/05 18:00:02 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ typedef struct s_gfx
 	void		*win;
 	t_img		screen1;
 	t_img		screen2;
+	float		screen_dist;
 	t_img		*screen;
 	t_img		*back;
 	t_textures	textures;

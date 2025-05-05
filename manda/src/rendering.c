@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rendering.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:54:13 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/03/10 19:43:05 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/05 18:30:11 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,9 +124,10 @@ void	render(t_gfx *gfx)
 	t_vec2		dir;
 
 	screen_coord_x = 0;
-	angle_x = -(FOV * D2R) / 2 + gfx->player.dir;
 	while (screen_coord_x < WIN_X)
 	{
+		angle_x = gfx->player.dir + atanf((screen_coord_x
+					- WIN_Y) / (gfx->screen_dist * WIN_X));
 		dir = (t_vec2){{cosf(angle_x), sinf(angle_x)}};
 		rc = raycast(gfx->player.pos, dir, gfx, gfx->max_raycast_distance);
 		if (isnan(rc.distance))
@@ -137,7 +138,6 @@ void	render(t_gfx *gfx)
 			draw_pixel_line(gfx,
 				get_cardinal_image(rc.wall_face, gfx), rc, screen_coord_x);
 		}
-		angle_x += (FOV * D2R) / WIN_X;
 		screen_coord_x += 1;
 	}
 }
