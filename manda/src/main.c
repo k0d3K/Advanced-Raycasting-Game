@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 18:37:15 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/03/10 19:39:15 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/05 17:12:08 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 #include <X11/X.h>
 #include <X11/keysym.h>
 #include <math.h>
-#include <stdio.h>
 
 static void	pre_parsing(int argc, char **argv)
 {
@@ -42,7 +41,7 @@ static void	pre_parsing(int argc, char **argv)
 
 static void	set_variables(t_gfx *gfx)
 {
-	gfx->tan_half_fov = tanf(g_aspect_ratio * (FOV * D2R) / 2);
+	gfx->tan_half_fov = tanf((float)WIN_Y / WIN_X * (FOV * D2R) / 2);
 	gfx->player.height = PLAYER_EYE;
 }
 
