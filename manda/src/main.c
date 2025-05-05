@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 18:37:15 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/05 17:12:08 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/05 18:04:23 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ static void	pre_parsing(int argc, char **argv)
 
 static void	set_variables(t_gfx *gfx)
 {
-	gfx->tan_half_fov = tanf((float)WIN_Y / WIN_X * (FOV * D2R) / 2);
+	gfx->tan_half_fov = tanf((FOV * D2R) / 2);
+	gfx->screen_dist = 1.0f / (2.0f * gfx->tan_half_fov);
 	gfx->player.height = PLAYER_EYE;
 }
 
