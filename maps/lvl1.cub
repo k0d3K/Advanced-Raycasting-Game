@@ -1,0 +1,33 @@
+NO ./textures/wall1.bmp
+SO ./textures/wall1.bmp
+WE ./textures/wall1.bmp
+EA ./textures/wall1.bmp
+DO ./textures/door.bmp
+e  ./textures/meow.bmp
+CO ./textures/banana.bmp 12 1
+C  ./textures/sky.bmp
+F  ./textures/ground.bmp
+M  ./textures/riolu.bmp 12 17
+
+ENTITY
+M  12.5 1.5  0.7  0.4
+M  1.5  10.5 0.7  0.4
+M  10.5 8.5  1.5  1.0
+CO 3.5  3.5  0.2  0.2
+CO 12.5 2.5  0.2  0.2
+CO 12.5 10.5 0.2  0.2
+
+MAP
+111111111111111
+11e110000001001
+10S0D0000001001
+100010000001001
+11D110000000001
+100000000000001
+100000000000001
+100000000111001
+100000000100001
+111100000100001
+100000000000001
+100000000000001
+111111111111111

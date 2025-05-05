@@ -1,0 +1,12 @@
+start_screen=textures/mael.bmp
+level_end_screen=textures/meow.bmp
+end_screen=textures/heart.bmp
+death_screen=textures/lol-lmao.bmp
+
+[map_list]
+maps/lvl1.cub
+maps/lvl2.cub
+maps/lvl3.cub
+maps/lvl4.cub
+maps/lvl5.cub
+[end]
