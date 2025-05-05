@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   img.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 16:21:06 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/26 18:13:45 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/05 18:16:24 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,7 @@ char	*atlas_init(t_gfx *gfx, t_atlas *atlas,
 			char *filename, t_point n_textures);
 t_point	atlas_fetch(t_atlas *atlas, int32_t n);
 void	atlas_render(t_atlas *atlas, t_img *out, int32_t n, t_point p);
+
+void	img_text(t_gfx *gfx, t_img *img, t_point p, char *str);
 
 #endif
