@@ -5,7 +5,7 @@ $(info WARNING: building with debug flag)
 endif
 CFLAGS := $(CFLAGS) -g
 else
-CFLAGS := $(CFLAGS) -O3
+CFLAGS := $(CFLAGS) -O1
 endif
 
 NAME := ../cub3D
