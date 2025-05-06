@@ -6,7 +6,7 @@
 /*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 19:36:53 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/03/12 13:45:11 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 16:07:41 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "utils.h"
 #include <X.h>
 
-int	init_screens(t_gfx *gfx)
+static int	init_screens(t_gfx *gfx)
 {
 	if (!img_init(gfx, &gfx->screen1, point(WIN_X, WIN_Y)))
 		return (0);
