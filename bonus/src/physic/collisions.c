@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   collisions.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 14:53:56 by lguerbig          #+#    #+#             */
-/*   Updated: 2025/05/05 18:26:21 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:17:23 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void	collision_effect(t_gfx *gfx, t_entity *e, int *hit)
 	{
 		e->is_dead = 1;
 		gfx->game_vars.n_coins_collected++;
+		gfx->game_vars.refresh_stats = 1;
 	}
 	else
 	{

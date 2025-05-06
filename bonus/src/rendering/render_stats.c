@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render_stats.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:54:22 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/05 18:56:28 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:21:13 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,18 +137,13 @@ static void	draw_crosshair(t_gfx *gfx)
 
 void	render_stats(t_gfx *gfx)
 {
-	static int	last_player_life = 0;
-	static int	last_gun_img = 0;
-
-	if (gfx->player.life_point != last_player_life
-		|| gfx->gun.n_gun_img != last_gun_img)
+	if (gfx->game_vars.refresh_stats)
 	{
-		last_gun_img = gfx->gun.n_gun_img;
-		last_player_life = gfx->player.life_point;
 		clear_img(&gfx->stats_img, 0);
 		render_life_bar(gfx);
 		draw_crosshair(gfx);
 		draw_gun(gfx);
+		gfx->game_vars.refresh_stats = 0;
 	}
 	render_remaining_text(gfx);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   player_management.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:33:01 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/28 15:40:38 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/06 17:19:26 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ static void	player_collision(t_gfx *gfx, t_vec3 pos, t_vec3 last)
 			toggle_level_end_screen(gfx, 1);
 			return ;
 		}
+		gfx->game_vars.refresh_stats = 1;
 	}
 	gfx->player.hit -= gfx->dt;
 	if (gfx->player.hit < 0)

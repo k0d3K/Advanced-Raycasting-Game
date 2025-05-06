@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   mouse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:33:01 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/05 18:33:38 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:18:03 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ void	mouse_click(int button, int x, int y, t_gfx *gfx)
 		{
 			gfx->entity_hit->is_dead = 1;
 			gfx->game_vars.n_enemies_killed++;
+			gfx->game_vars.refresh_stats = 1;
 		}
 	}
 }

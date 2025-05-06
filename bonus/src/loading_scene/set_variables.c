@@ -6,7 +6,7 @@
 /*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 14:46:13 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/06 17:04:31 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:22:31 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	set_player_variables(t_gfx *gfx)
 	gfx->player.angle = face_to_angle(gfx->map.start_orientation);
 	gfx->gun.last_shot = get_time_micro();
 	gfx->gun.nb_shot_left = FULL_MAGAZINE;
+	gfx->game_vars.refresh_stats = 1;
 }
 
 int	init_resources(t_gfx *gfx)

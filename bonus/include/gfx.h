@@ -6,7 +6,7 @@
 /*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 17:53:57 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/06 11:46:24 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:17:00 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ typedef struct s_game_vars
 	int				n_coins;
 	int				n_enemies_killed;
 	int				n_coins_collected;
+	int				refresh_stats;
 }	t_game_vars;
 
 typedef struct s_gun

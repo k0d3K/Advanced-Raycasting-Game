@@ -6,7 +6,7 @@
 /*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:33:01 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/06 17:04:05 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:25:51 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static void	choose_reloading_img(t_gfx *gfx, uint64_t elapsed, uint64_t current)
 {
-	if (elapsed > 100000 && elapsed < 200000)
+	if (elapsed > 75000 && elapsed < 200000)
 		gfx->gun.n_gun_img = 4;
 	else if (elapsed > 200000 && elapsed < 300000)
 		gfx->gun.n_gun_img = 5;
@@ -36,7 +36,9 @@ void	choose_gun_img(t_gfx *gfx)
 {
 	uint64_t	current;
 	uint64_t	elapsed;
+	int			cur_gun_img;
 
+	cur_gun_img = gfx->gun.n_gun_img;
 	current = get_time_micro();
 	elapsed = current - gfx->gun.last_shot;
 	if (gfx->gun.reloading)
@@ -50,4 +52,6 @@ void	choose_gun_img(t_gfx *gfx)
 		gfx->gun.last_shot = current;
 		gfx->gun.n_gun_img = 0;
 	}
+	if (cur_gun_img != gfx->gun.n_gun_img)
+		gfx->game_vars.refresh_stats = 1;
 }
