@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gfx.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 17:53:57 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/05 18:28:18 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 11:46:24 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,23 +71,25 @@ typedef struct s_gfx
 	t_img					stats_img;
 	t_img					hurt_img;
 	t_textures				textures;
+
 	float					dt;
 	double					time_elapsed;
 	float					fov;
 	float					tan_half_fov;
 	float					max_raycast_distance;
 	float					screen_dist;
+	float					cam_dir;
+	float					sin_cam_dir;
 
 	t_entity				player;
+	t_gun					gun;
+	t_input					input;
 
 	t_entity_list			entities;
 	t_entity				*entity_drawn;
 	t_entity				*entity_hit;
-	t_gun					gun;
-	t_input					input;
+
 	t_map					map;
-	float					cam_dir;
-	float					sin_cam_dir;
 	t_dict					texture_files;
 
 	t_pathfinding_resources	pf_res;
