@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   img.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 16:21:06 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/05 16:42:07 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 16:00:55 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,5 @@ typedef struct s_gfx	t_gfx;
 
 int		img_init(t_gfx *gfx, t_img *img, t_point size);
 void	img_put(t_img *img, t_point p, t_color c);
-t_color	img_get(t_img *img, t_point p);
 
 #endif

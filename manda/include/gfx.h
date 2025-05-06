@@ -6,7 +6,7 @@
 /*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 17:53:57 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/06 15:58:54 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 16:01:21 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,18 +52,7 @@ typedef struct s_gfx
 
 int		gfx_init(t_gfx *gfx);
 void	gfx_deinit(t_gfx *gfx);
-void	gfx_put(t_gfx *gfx, t_point p, t_color c);
 void	gfx_render(t_gfx *gfx);
-
-typedef struct s_bresenham
-{
-	t_point	from;
-	t_point	to;
-	t_point	dir;
-	t_point	sign;
-	int		err;
-	int		e2;
-}	t_bresenham;
 
 void	loop(t_gfx *gfx);
 

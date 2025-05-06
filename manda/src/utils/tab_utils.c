@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tab_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 17:27:31 by lguerbig          #+#    #+#             */
-/*   Updated: 2025/03/08 17:29:40 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 16:02:58 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,25 +29,6 @@ size_t	size_tab(char **tab)
 	while (tab[size])
 		size++;
 	return (size);
-}
-
-/**
- * @brief Free a matrix
- * 
- * @param matrix The matrix to free
- * @param size The size of the matrix
- */
-void	ft_free_matrix(void **matrix, size_t size)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < size)
-	{
-		free(matrix[i]);
-		++i;
-	}
-	free(matrix);
 }
 
 /**

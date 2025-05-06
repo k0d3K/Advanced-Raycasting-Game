@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gfx_draw.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 00:41:57 by dath              #+#    #+#             */
-/*   Updated: 2025/03/10 19:28:26 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/06 16:01:13 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,9 @@ static inline __attribute__((always_inline))
 	return (addr);
 }
 
-void	gfx_put(t_gfx *gfx, t_point p, t_color c)
-{
-	*get_addr(gfx->screen, p) = c;
-}
-
 void	img_put(t_img *img, t_point p, t_color c)
 {
 	*get_addr(img, p) = c;
-}
-
-t_color	img_get(t_img *img, t_point p)
-{
-	return (*get_addr(img, p));
 }
 
 void	gfx_render(t_gfx *gfx)

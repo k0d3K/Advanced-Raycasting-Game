@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:03:09 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/03/08 00:31:41 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/06 16:02:53 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 size_t		size_tab(char **tab);
 
 void		ft_clean_matrix(void **matrix);
-void		ft_free_matrix(void **matrix, size_t size);
 char		*skip_empty_lines(int fd);
 t_cardinal	get_character_orientation(char c);
 float		cardinal_to_angle(t_cardinal c);
