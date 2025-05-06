@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   render_hurt_effect.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 18:33:52 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/29 19:27:24 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/06 14:45:49 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	render_hurt_effect(t_gfx *gfx, int from, int to)
 				= apply_hit_effect(hit_value, screen_coord.x, screen_coord.y);
 			screen_coord.x++;
 		}
-		pxl = pxl + TRUE_WIN_W - N_PIXEL_PER_SLICE;
+		pxl = pxl + TRUE_WIN_W - (to - from);
 		screen_coord.y++;
 	}
 }

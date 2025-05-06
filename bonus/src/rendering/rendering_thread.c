@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rendering_thread.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 13:13:15 by dath              #+#    #+#             */
-/*   Updated: 2025/04/29 19:25:06 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/06 14:44:55 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ void	render_loop(t_render_thread *self)
 
 	range.x = self->id * N_PIXEL_PER_SLICE;
 	range.y = range.x + N_PIXEL_PER_SLICE;
+	if (range.y > TRUE_WIN_W)
+		range.y = TRUE_WIN_W;
 	while (1)
 	{
 		if (!wait_for_cond(self))

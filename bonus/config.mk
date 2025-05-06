@@ -28,7 +28,7 @@ N_SLICE_THREADS := $(shell \
 		echo 1 ; \
 	fi)
 
-N_PIXEL_PER_SLICE := $(shell echo $$(($(TRUE_DPY_W) / $(N_SLICE_THREADS))))
+N_PIXEL_PER_SLICE := $(shell echo $$(($(TRUE_DPY_W) / $(N_SLICE_THREADS) + 1)))
 
 # --- game
 G := 9.81f
