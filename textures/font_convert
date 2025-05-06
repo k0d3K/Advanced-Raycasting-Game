@@ -17,7 +17,7 @@ out_name = "font.png"
 x_size = N_PER_ROW * chr_size
 y_size = chr_size * (1 + len(ALPHA) // N_PER_ROW)
 
-image = Image.new(mode='RGB', size=(x_size, y_size), color="black")
+image = Image.new(mode='RGB', size=(x_size, y_size), color="cyan")
 imageFont = ImageFont.truetype(font, chr_size)
 
 draw = ImageDraw.Draw(image)
@@ -35,7 +35,7 @@ while x != N_PER_ROW:
 	draw.rectangle(((x * chr_size, y * chr_size), ((x + 1) * chr_size, (y + 1) * chr_size)), "black")
 	x += 1
 
-ImageDraw.floodfill(image, xy=(0,0), value=(0,255,255), thresh=100, border=(255, 255, 255))
+#ImageDraw.floodfill(image, xy=(0,0), value=(0,255,255), thresh=100, border=(255, 255, 255))
 
 image.save(out_name)
 system(path.join(curdir, "./bmp_convert") + ' ' + out_name)
