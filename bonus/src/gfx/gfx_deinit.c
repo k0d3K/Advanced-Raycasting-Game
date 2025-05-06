@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gfx_deinit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 23:45:12 by dath              #+#    #+#             */
-/*   Updated: 2025/04/27 12:26:58 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/06 13:35:23 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,10 @@ void	gfx_unload_scene(t_gfx *gfx)
 	deinit_rcs(gfx);
 	ft_bzero(&gfx->map, sizeof(t_map));
 	ft_bzero(&gfx->input, sizeof(t_input));
+	gfx->game_vars.n_coins = 0;
+	gfx->game_vars.n_coins_collected = 0;
+	gfx->game_vars.n_enemies = 0;
+	gfx->game_vars.n_enemies_killed = 0;
 }
 
 void	gfx_deinit(t_gfx *gfx)
