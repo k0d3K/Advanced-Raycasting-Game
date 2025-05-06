@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strings.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 23:51:54 by dath              #+#    #+#             */
-/*   Updated: 2025/04/27 15:31:57 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/06 17:34:45 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ argument as a .cub or .adv format."
 # define ERR_INVALID_LINE		"Invalid line: %s"
 # define ERR_IDENTIFIER			"Unknown identifier: %s"
 # define ERR_DOUBLE_ID			"Multiple defintion of identfier %s"
-# define ERR_ATLAS_SIZE			"Invalid size for atlas %s"
+# define ERR_ATLAS_SIZE			"Invalid size for atlas: %s"
 # define ERR_POS_OOB			"Impossible de place a entity outside of the\
  map: x=%0.1f y=%0.1f"
 # define ERR_POS_TOO_HIGHT		"Impossible de place a entity on one of the\

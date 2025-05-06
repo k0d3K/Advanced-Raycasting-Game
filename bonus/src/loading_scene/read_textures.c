@@ -6,7 +6,7 @@
 /*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/02 14:39:03 by lguerbig          #+#    #+#             */
-/*   Updated: 2025/04/16 19:55:24 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:40:40 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ static	int	get_atlas_size(t_gfx *gfx, char **args)
 
 	x = is_int(args[2]);
 	y = is_int(args[3]);
-	if (x == -1 || y == -1)
+	if (x <= 0 || y <= 0)
 	{
-		if (x == -1)
+		if (x <= 0)
 			error(ERR_ATLAS_SIZE, args[2]);
 		else
 			error(ERR_ATLAS_SIZE, args[3]);
@@ -67,9 +67,9 @@ static int	store_texture(t_gfx *gfx, char **args)
 		args = NULL;
 		return (0);
 	}
-	dict_add(&gfx->texture_files, args[0], args[1]);
 	if (args[2] && !get_atlas_size(gfx, args))
 		return (0);
+	dict_add(&gfx->texture_files, args[0], args[1]);
 	free(args[0]);
 	free(args);
 	return (1);
