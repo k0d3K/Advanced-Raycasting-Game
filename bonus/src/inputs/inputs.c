@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   inputs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:33:01 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/06 13:38:39 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 15:28:20 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,24 +20,24 @@ static int	verify_ending(t_gfx *gfx)
 		&& gfx->game_vars.n_enemies_killed == gfx->game_vars.n_enemies);
 }
 
-static void	action_door(t_gfx *gfx)
+static void	action_door(t_gfx *gfx, float i)
 {
 	t_tile	tail;
 	t_vec2	pos;
 	t_door	*door;
-	float	i;
 
-	i = 0.5;
 	while (i < 3)
 	{
 		pos.v = gfx->player.plane_pos.v + (float)i * gfx->player.dir.v;
+		if (pos.x < 0 || pos.y < 0
+			|| !check_in_bounds((int)pos.x, (int)pos.y, &gfx->map, NULL))
+			return ;
 		tail = gfx->map.tile_data[(int)pos.y][(int)pos.x];
 		if (tail.type == T_DOOR && tail.door.height > gfx->player.pos.z)
 		{
 			if ((int)pos.x == gfx->map.end_pos.x
-				&& (int)pos.y == gfx->map.end_pos.y)
-				if (!verify_ending(gfx))
-					return ;
+				&& (int)pos.y == gfx->map.end_pos.y && !verify_ending(gfx))
+				return ;
 			door = &gfx->map.tile_data[(int)pos.y][(int)pos.x].door;
 			if (door->state >= OPENING)
 				door->state = CLOSING;
@@ -73,14 +73,15 @@ void	on_press(int keycode, t_gfx *gfx)
 		gfx->player.nb_jump += 1;
 	}
 	else if (keycode == XK_e && gfx->game_vars.game_state == PLAYING)
-		action_door(gfx);
+		action_door(gfx, 0.5f);
 	else if (keycode == XK_Shift_L)
 		gfx->input.run = 1;
 }
 
 void	on_release2(int keycode, t_gfx *gfx)
 {
-	if (keycode == XK_r)
+	if (keycode == XK_r
+		&& gfx->gun.reloading == 0 && gfx->gun.nb_shot_left != 5)
 	{
 		gfx->gun.reloading = 1;
 		gfx->gun.n_gun_img = 3;
