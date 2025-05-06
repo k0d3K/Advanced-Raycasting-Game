@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   select_gun_img.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:33:01 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/05 15:31:36 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:04:05 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static void	choose_reloading_img(t_gfx *gfx, uint64_t elapsed, uint64_t current)
 		gfx->gun.last_shot = current;
 		gfx->gun.n_gun_img = 0;
 		gfx->gun.reloading = 0;
-		gfx->gun.nb_shot_left = 5;
+		gfx->gun.nb_shot_left = FULL_MAGAZINE;
 	}
 }
 

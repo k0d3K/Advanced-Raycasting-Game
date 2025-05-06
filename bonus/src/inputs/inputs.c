@@ -6,7 +6,7 @@
 /*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:33:01 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/06 15:28:20 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:04:10 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,10 +78,10 @@ void	on_press(int keycode, t_gfx *gfx)
 		gfx->input.run = 1;
 }
 
-void	on_release2(int keycode, t_gfx *gfx)
+static void	on_release2(int keycode, t_gfx *gfx)
 {
 	if (keycode == XK_r
-		&& gfx->gun.reloading == 0 && gfx->gun.nb_shot_left != 5)
+		&& gfx->gun.reloading == 0 && gfx->gun.nb_shot_left != FULL_MAGAZINE)
 	{
 		gfx->gun.reloading = 1;
 		gfx->gun.n_gun_img = 3;
