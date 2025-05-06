@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gfx.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 17:53:57 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/05 18:00:02 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 15:58:54 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,6 @@ typedef struct s_bresenham
 	int		err;
 	int		e2;
 }	t_bresenham;
-
-void	gfx_line(t_gfx *gfx, t_point from, t_point to, t_color c);
 
 void	loop(t_gfx *gfx);
 
