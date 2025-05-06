@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   gfx.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 17:53:57 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/28 15:32:05 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/05 18:28:18 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,10 @@ typedef struct s_game_vars
 	int				level_cursor;
 	int				level_index;
 	float			time_taken_in_level;
+	int				n_enemies;
+	int				n_coins;
+	int				n_enemies_killed;
+	int				n_coins_collected;
 }	t_game_vars;
 
 typedef struct s_gun

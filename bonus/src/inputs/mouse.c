@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   mouse.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:33:01 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/29 19:27:24 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/05 18:33:38 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "input.h"
 #include "gfx.h"
-#include "map.h"
 #include <math.h>
 
 /**
@@ -60,6 +59,9 @@ void	mouse_click(int button, int x, int y, t_gfx *gfx)
 		dir.v = -dir.v * 3;
 		gfx->entity_hit->speed = vec3(dir.x, dir.y, 2);
 		if (gfx->entity_hit->life_point < 0)
+		{
 			gfx->entity_hit->is_dead = 1;
+			gfx->game_vars.n_enemies_killed++;
+		}
 	}
 }

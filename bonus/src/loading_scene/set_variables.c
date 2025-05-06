@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   set_variables.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 14:46:13 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/19 14:15:17 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/05 18:23:57 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ void	set_player_variables(t_gfx *gfx)
 	gfx->player.angle = face_to_angle(gfx->map.start_orientation);
 	gfx->gun.last_shot = get_time_micro();
 	gfx->gun.nb_shot_left = 5;
+	gfx->game_vars.n_coins_collected = 0;
+	gfx->game_vars.n_enemies_killed = 0;
 }
 
 int	init_resources(t_gfx *gfx)

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   render_stats.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:54:22 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/04 18:21:33 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/05 18:56:28 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minimap.h"
-#include "libft.h"
-#include <ctype.h>
+#include "geo.h"
+#include "gfx.h"
+#include "rendering.h"
 #include <math.h>
 
 #define B_SIZE_X	20
@@ -150,4 +150,5 @@ void	render_stats(t_gfx *gfx)
 		draw_crosshair(gfx);
 		draw_gun(gfx);
 	}
+	render_remaining_text(gfx);
 }

@@ -6,7 +6,7 @@
 /*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:58:32 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/05 15:41:11 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/05 18:55:36 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,5 +105,7 @@ void	clear_img(t_img *img, t_color clear_color);
 void	draw_bullets(t_gfx *gfx, t_drawing d);
 void	draw_heart(t_gfx *gfx, t_drawing d);
 void	render_life_bar(t_gfx *gfx);
+void	render_stats(t_gfx *gfx);
+void	render_remaining_text(t_gfx *gfx);
 
 #endif

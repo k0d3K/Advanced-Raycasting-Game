@@ -6,12 +6,12 @@
 /*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:54:22 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/05 15:30:02 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/05 18:54:24 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minimap.h"
-#include "libft.h"
+#include "rendering.h"
+#include "gfx.h"
 
 static int	get_bar_color(t_drawing d, float life_percent, int pos_y)
 {

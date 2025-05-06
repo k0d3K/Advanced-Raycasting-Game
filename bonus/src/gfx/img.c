@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   img.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 19:50:44 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/26 18:13:39 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/05 18:57:33 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "img.h"
 #include "gfx.h"
+#include <string.h>
 
 int	img_init(t_gfx *gfx, t_img *img, t_point size)
 {
@@ -38,6 +40,11 @@ void	clear_img(t_img *img, t_color clear_color)
 	t_color	*data;
 
 	data = img->data;
+	if (!clear_color)
+	{
+		memset(data, 0, img->size.x * img->size.y * sizeof(t_color));
+		return ;
+	}
 	y = img->size.y;
 	while (--y >= 0)
 	{

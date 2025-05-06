@@ -6,10 +6,11 @@
 /*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 11:26:52 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/05 15:45:32 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/05 18:15:47 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "geo.h"
 #include "gfx.h"
 #include <stdint.h>
 #include <assert.h>
@@ -59,7 +60,7 @@ static int	handle_special_character(
 	return (1);
 }
 
-void	gfx_text(t_gfx *gfx, t_point p, char *str)
+void	img_text(t_gfx *gfx, t_img *img, t_point p, char *str)
 {
 	t_atlas		*font;
 	char		c;
@@ -73,9 +74,14 @@ void	gfx_text(t_gfx *gfx, t_point p, char *str)
 	{
 		if (!handle_special_character(c, &p, font, orig_x_pos))
 		{
-			atlas_render(font, gfx->screen, get_char_index(c), p);
+			atlas_render(font, img, get_char_index(c), p);
 			p.x += font->tile_width;
 		}
 		c = *str++;
 	}
+}
+
+void	gfx_text(t_gfx *gfx, t_point p, char *str)
+{
+	img_text(gfx, gfx->screen, p, str);
 }

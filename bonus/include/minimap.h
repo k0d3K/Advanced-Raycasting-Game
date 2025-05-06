@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minimap.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:57:09 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/11 15:34:57 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/05 18:52:56 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,4 @@ t_point	map_calc_pos_on_mmap(t_gfx *gfx, t_entity entity);
 t_vec2	mmap_calc_pos_on_map(t_gfx *gfx, t_point minimap_pxl, t_vec2 dir);
 void	mmap_put_avg(t_gfx *gfx, t_point pos);
 
-void	render_stats(t_gfx *gfx);
 #endif
