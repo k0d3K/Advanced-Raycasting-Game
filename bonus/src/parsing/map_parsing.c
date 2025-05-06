@@ -6,7 +6,7 @@
 /*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 16:48:53 by lguerbig          #+#    #+#             */
-/*   Updated: 2025/04/16 11:56:34 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 16:57:35 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ static int	ensure_map_is_closed(t_map *map)
 	return (1);
 }
 
-int	allocate_tile_data(t_map *map)
+static int	allocate_tile_data(t_map *map)
 {
 	int	i;
 

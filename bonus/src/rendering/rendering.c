@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rendering.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:54:13 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/29 19:27:24 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/06 17:13:08 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	draw_entity_line(t_gfx *gfx, t_entity *e, t_raycast rc, int screen_x)
 	}
 }
 
-void	draw_entities(t_gfx	*gfx, t_raycast_pair *rcs, int screen_coord_x)
+static void	draw_entities(t_gfx	*gfx, t_raycast_pair *rcs, int screen_coord_x)
 {
 	int			i;
 	t_entity	*e;

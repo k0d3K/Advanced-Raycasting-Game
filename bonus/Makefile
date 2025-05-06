@@ -20,7 +20,7 @@ MLX := ../mlx/libmlx.a
 
 INCLUDE_DIRS := $(addprefix -I, $(INCLUDE_DIRS))
 
-C_FILES := main dt map_utils \
+C_FILES := main dt \
 	$(addprefix inputs/, inputs mouse) \
 	$(addprefix loop/, loop_logic end_screen_loop game_loop title_screen_loop \
 		game_flow no_debug debug movements player_management select_gun_img) \
@@ -37,7 +37,7 @@ C_FILES := main dt map_utils \
 	$(addprefix entity/pathfinding/, node_pool node_list node_list_alloc pathfinding \
 		pathfinding_impl pathfinding_resources pathfinding_adjacent_nodes pathfinding_debug \
 		pathfinding_h_cost pathfinding_can_cross_diagonal_node) \
-	$(addprefix utils/, tab_utils geo_utils error time_utils thread_utils scene_utils crc32 dict dict_mem)
+	$(addprefix utils/, tab_utils geo_utils error time_utils thread_utils scene_utils map_utils crc32 dict dict_mem)
 
 C_FILES := $(addsuffix .c, $(C_FILES))
 

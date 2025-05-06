@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   raycast_list.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 14:12:04 by dath              #+#    #+#             */
-/*   Updated: 2025/04/07 13:15:24 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:00:23 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "raycast.h"
 #include <sys/param.h>
 
-t_face	swap_face(t_face c)
+static t_face	swap_face(t_face c)
 {
 	if (c == NORTH)
 		return (SOUTH);

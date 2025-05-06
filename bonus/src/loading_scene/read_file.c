@@ -6,7 +6,7 @@
 /*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 10:56:39 by lguerbig          #+#    #+#             */
-/*   Updated: 2025/04/16 19:28:48 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 16:45:11 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ static int	get_map(t_gfx *gfx, int fd)
 	return (1);
 }
 
-int	init_data_loading(t_gfx *gfx, char *filename)
+static int	init_data_loading(t_gfx *gfx, char *filename)
 {
 	int	fd;
 
