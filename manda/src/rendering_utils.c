@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rendering_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/06 21:35:38 by dath              #+#    #+#             */
-/*   Updated: 2025/05/05 18:28:13 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 15:57:01 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ void	calculate_floor_ceil_ratios(
 	ceiling_height = rc.distance
 		* (float)WIN_Y / WIN_X * gfx->tan_half_fov - gfx->player.height;
 	floor_height = rc.distance
-		* (float)WIN_Y / WIN_X * gfx->tan_half_fov - WALL_HEIGHT + gfx->player.height;
+		* (float)WIN_Y / WIN_X * gfx->tan_half_fov
+		- WALL_HEIGHT + gfx->player.height;
 	sum = ceiling_height + floor_height + WALL_HEIGHT;
 	data->ceil_ratio = floor_height / sum;
 	data->floor_ratio = ceiling_height / sum;
