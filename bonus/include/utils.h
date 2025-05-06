@@ -6,7 +6,7 @@
 /*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 14:03:09 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/18 14:05:56 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 16:36:01 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,23 +41,6 @@ void			join_threads(t_gfx *gfx, int n);
 
 int				get_wall_height(char c);
 t_img			*get_face_image(t_face face, t_gfx *gfx);
-
-typedef struct s_compute_cache_params
-{
-	size_t	start;
-	size_t	end;
-	size_t	type_size;
-	void	(*fn)(void *store, size_t idx);
-}	t_compute_cache_params;
-
-typedef struct s_compute_cache
-{
-	void	*cache;
-	size_t	len;
-}	t_compute_cache;
-
-int				compute_cache_init(t_compute_cache *out,
-					t_compute_cache_params params);
 
 uint32_t		str_crc32(char *str);
 

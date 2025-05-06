@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pathfinding.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 17:18:01 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/14 18:01:43 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/06 16:34:06 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ typedef struct s_node_list
 
 int			node_list_init(t_node_list *lst, uint32_t max_capacity);
 t_node		*node_list_insert(t_node_list *lst, t_node node);
-int			node_list_remove(t_node_list *lst, t_node *node);
 t_node		*node_list_fetch_least_costly_node(t_node_list *lst);
 t_node		*node_list_get_node_with_pos(t_node_list *lst, t_point p);
 void		node_list_clear(t_node_list *lst);

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   node_list.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 17:20:21 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/14 17:42:56 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/06 16:34:03 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,28 +23,6 @@ t_node	*node_list_insert(t_node_list *lst, t_node node)
 	lst->first = ptr;
 	lst->size++;
 	return (ptr);
-}
-
-int	node_list_remove(t_node_list *lst, t_node *node)
-{
-	t_node	*cur;
-
-	if (!lst->first)
-		return (0);
-	if (lst->first == node)
-		lst->first = NULL;
-	cur = lst->first;
-	while (cur)
-	{
-		if (cur->next == node)
-		{
-			cur->next = node->next;
-			lst->size--;
-			return (1);
-		}
-		cur = cur->next;
-	}
-	return (0);
 }
 
 t_node	*node_list_get_node_with_pos(t_node_list *lst, t_point p)
