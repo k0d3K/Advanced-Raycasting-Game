@@ -6,7 +6,7 @@
 /*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/18 18:33:01 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/05 18:26:52 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 13:38:39 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,8 @@
 
 static int	verify_ending(t_gfx *gfx)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (i < gfx->entities.len)
-	{
-		if (!gfx->entities.arr[i].is_dead)
-			return (0);
-		i++;
-	}
-	return (1);
+	return (gfx->game_vars.n_coins_collected == gfx->game_vars.n_coins
+		&& gfx->game_vars.n_enemies_killed == gfx->game_vars.n_enemies);
 }
 
 static void	action_door(t_gfx *gfx)
