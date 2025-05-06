@@ -6,7 +6,7 @@
 /*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/12 22:50:37 by dath              #+#    #+#             */
-/*   Updated: 2025/04/16 15:43:35 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 16:37:52 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 #include "utils.h"
 #include <stdlib.h>
 
-// TODO: possibly reduce to everything that isnt a space
-// or the tallest wall in max_capacity
 int	pathfinding_init_resources(t_pathfinding_resources *res, t_map *map)
 {
 	uint8_t			**traversed_nodes;
