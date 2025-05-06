@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   entity.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 17:27:04 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/19 14:15:52 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 16:10:56 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ void	manage_player(t_gfx *gfx);
 //	entity.c
 int		entity_list_init(t_entity_list *lst, size_t init_cap);
 int		entity_list_add(t_entity_list *lst, t_entity e);
-void	entity_list_remove(t_entity_list *lst, size_t start, size_t n);
 
 //	entity_utils.c
 void	entity_check_if_pathfinding_should_be_refreshed(t_entity *e);

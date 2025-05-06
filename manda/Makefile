@@ -21,7 +21,7 @@ MLX := ../mlx/libmlx.a
 INCLUDE_DIRS := $(addprefix -I, $(INCLUDE_DIRS))
 
 C_FILES := main dt input loop_logic raycast rendering rendering_utils map_utils \
-	$(addprefix geo/, point vec2 vec3) \
+	$(addprefix geo/, point vec2) \
 	$(addprefix gfx/, gfx_init gfx_draw img texture bitmap) \
 	$(addprefix loading_scene/, read_file read_textures get_colors parsing_and_validation) \
 	$(addprefix utils/, tab_utils file_utils geo_utils error)

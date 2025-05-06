@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   entity_list.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/04 17:36:40 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/04/06 11:21:35 by lguerbig         ###   ########.fr       */
+/*   Updated: 2025/05/06 16:11:00 by tjouvenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,16 +43,4 @@ int	entity_list_add(t_entity_list *lst, t_entity e)
 	}
 	lst->arr[lst->len++] = e;
 	return (1);
-}
-
-void	entity_list_remove(t_entity_list *lst, size_t start, size_t n)
-{
-	if (!lst->arr)
-		return ;
-	assert(start + n - 1 < lst->len);
-	ft_memmove(&lst->arr[start],
-		&lst->arr[start + n],
-		(lst->len - n) * sizeof(t_entity));
-	ft_bzero(&lst->arr[lst->len - n], n * sizeof(t_entity));
-	lst->len -= n;
 }
