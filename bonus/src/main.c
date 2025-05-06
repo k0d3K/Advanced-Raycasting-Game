@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 18:37:15 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/05 15:42:05 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 17:14:15 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ static int	init_all_resources(t_gfx *gfx, char *arg)
 		error(MLX_WIN_FAIL);
 		return (0);
 	}
-	mlx_set_font(gfx->mlx, gfx->win, "-*-*-*-*-*-*-*-120-100-100-*-0-*-16");
 	return (1);
 }
 
