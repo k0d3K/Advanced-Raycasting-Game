@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   title_screen_loop.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dath <dath@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/26 18:15:47 by dath              #+#    #+#             */
-/*   Updated: 2025/04/29 19:26:56 by dath             ###   ########.fr       */
+/*   Updated: 2025/05/06 17:12:37 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	title_screen_loop(t_gfx *gfx)
 {
 	t_game_vars	*vars;
 
-	if (gfx->input.level_select_confirm && gfx->time_elapsed > 2)
+	if (gfx->input.level_select_confirm && gfx->time_elapsed > 0.9f)
 	{
 		load_next_level(gfx, 1);
 		return ;
