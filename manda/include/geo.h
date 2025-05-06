@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   geo.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 18:40:12 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/05/06 16:12:03 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 16:40:27 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ t_point	point(int x, int y);
 t_vec2	vec2(float x, float y);
 float	vec2_length(t_vec2 v);
 t_vec2	vec2_normalize(t_vec2 v);
-float	vec2_dot(t_vec2 v1, t_vec2 v2);
-float	vec2_angle(t_vec2 v1, t_vec2 v2);
 
 # define PI		3.14159265359f
 # define R2D	57.2957795131f		// 180 / pi

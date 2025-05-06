@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   vec3.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjouvenc <tjouvenc@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lguerbig <lguerbig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 14:57:08 by tjouvenc          #+#    #+#             */
-/*   Updated: 2025/02/18 14:38:53 by tjouvenc         ###   ########.fr       */
+/*   Updated: 2025/05/06 16:39:22 by lguerbig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,21 +29,4 @@ t_vec3	vec3_normalize(t_vec3 v)
 
 	mag = vec3_length(v);
 	return ((t_vec3){{v.x / mag, v.y / mag, v.z / mag}});
-}
-
-float	vec3_dot(t_vec3 v1, t_vec3 v2)
-{
-	return (v1.x * v2.x + v1.y * v2.y + v1.z * v2.z);
-}
-
-float	vec3_angle(t_vec3 v1, t_vec3 v2)
-{
-	float	dot;
-	float	length1;
-	float	length2;
-
-	dot = v1.x * v2.x + v1.y * v2.y + v1.z * v2.z;
-	length1 = sqrtf(v1.x * v1.x + v1.y * v1.y + v1.z * v1.z);
-	length2 = sqrtf(v2.x * v2.x + v2.y * v2.y + v2.z * v2.z);
-	return (acosf(dot / (length1 * length2)));
 }
