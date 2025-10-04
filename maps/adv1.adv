@@ -1,7 +1,7 @@
-start_screen=textures/mael.bmp
-level_end_screen=textures/meow.bmp
-end_screen=textures/heart.bmp
-death_screen=textures/lol-lmao.bmp
+start_screen=textures/cubic.bmp
+level_end_screen=textures/cubic.bmp
+end_screen=textures/cubic.bmp
+death_screen=textures/cubic.bmp
 
 [map_list]
 maps/lvl1.cub

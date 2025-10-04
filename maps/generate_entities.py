@@ -7,6 +7,10 @@ DENSITY = 0.05
 E_WIDTH_VARIATION = (0.4, 0.8)
 E_HEIGHT_VARIATION = (0.3, 0.7)
 
+if len(argv) != 3:
+	print("Usage:", argv[0], "<file_with_existing_ma> <name_of_entity>")
+	exit(1)
+
 ENTITY_IND = argv[2]
 
 with open(argv[1], "rt") as map_f:

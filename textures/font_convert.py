@@ -38,4 +38,4 @@ while x != N_PER_ROW:
 #ImageDraw.floodfill(image, xy=(0,0), value=(0,255,255), thresh=100, border=(255, 255, 255))
 
 image.save(out_name)
-system(path.join(curdir, "./bmp_convert") + ' ' + out_name)
+# system(path.join(curdir, "bmp_convert.py") + ' ' + out_name)

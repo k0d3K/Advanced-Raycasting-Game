@@ -8,7 +8,7 @@ else
 CFLAGS := $(CFLAGS) -O3
 endif
 
-NAME := ../cub3D
+NAME := ../raycast_game
 SOURCE_DIR := ./src/
 OBJ_DIR := ./obj/
 INCLUDE_DIRS := ./include/ ./libft ../mlx /usr/include/X11
@@ -54,14 +54,14 @@ all: $(NAME)
 
 $(OBJECTS): $(OBJ_DIR)%.o : $(SOURCE_DIR)%.c
 	$(call echo_progress, $<)
-	@cc $(CFLAGS) $(CONFIG) $(INCLUDE_DIRS) -c $< -o $@
+	@clang $(CFLAGS) $(CONFIG) $(INCLUDE_DIRS) -c $< -o $@
 
 $(OBJ_DIR):
 #	recursively recreates the source dir folder hierarchy. pretty cool ngl
 	@(cd $(SOURCE_DIR) && find . -type d -exec mkdir -p -- $(shell pwd)/$(OBJ_DIR){} \;)
 
 $(NAME): $(OBJ_DIR) $(LIBFT) $(OBJECTS)
-	@cc $(CFLAGS) $(OBJECTS) $(LIBFT) -o $(NAME) $(MLX) -lXext -lX11 -lXrender -lXfixes -lm -lz
+	@clang $(CFLAGS) $(OBJECTS) $(LIBFT) -o $(NAME) $(MLX) -lXext -lX11 -lXrender -lXfixes -lm -lz
 
 $(LIBFT):
 	$(MAKE_LIBFT)
