@@ -2,7 +2,7 @@
 *.o
 *.out
 lib*.a
-cub3D
+raycast_game
 *.bmp
 *.txt
 core.*

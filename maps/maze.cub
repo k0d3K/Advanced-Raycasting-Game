@@ -1,13 +1,13 @@
-NO ./textures/MONSTER.bmp
+NO ./textures/wall3.bmp
 SO ./textures/wall3.bmp
 WE ./textures/wall3.bmp
 EA ./textures/wall3.bmp
 DO ./textures/door.bmp
-CO ./textures/coin.bmp    2 1
+CO ./textures/coin.bmp 1 1
 e  ./textures/sky.bmp
-C  ./textures/mael.bmp
-F  ./textures/mael.bmp
-MONSTER  ./textures/MONSTER.bmp 1 1
+C  ./textures/sky.bmp
+F  ./textures/ground.bmp
+MONSTER  ./textures/monster.bmp 1 1
 
 ENTITY
 CO    3.5  1.5  0.2   0.2
